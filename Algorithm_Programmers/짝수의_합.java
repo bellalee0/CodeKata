@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.stream.IntStream;
 
 public class 짝수의_합 {
     public static void main(String[] args) {
@@ -8,7 +9,8 @@ public class 짝수의_합 {
         int num1 = scanner.nextInt();
 
         Sum_Even sumEven = new Sum_Even();
-        System.out.println(sumEven.solution(num1));
+        System.out.println("for문 사용: " + sumEven.solution(num1));
+        System.out.println("Stream 사용: " + sumEven.stream(num1));
     }
 }
 
@@ -21,5 +23,11 @@ class Sum_Even {
             }
         }
         return answer;
+    }
+
+    public int stream(int n) {
+        return IntStream.rangeClosed(1, n)
+                .filter(i -> i%2==0)
+                .sum();
     }
 }
