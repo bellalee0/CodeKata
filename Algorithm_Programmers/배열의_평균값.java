@@ -6,7 +6,6 @@
 // 정답의 소수 부분이 .0 또는 .5인 경우만 입력으로 주어집니다.
 
 import java.util.Arrays;
-import java.util.Scanner;
 
 public class 배열의_평균값 {
     public static void  main(String[] args){
