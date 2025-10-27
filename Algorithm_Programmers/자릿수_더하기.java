@@ -28,4 +28,13 @@ class SumOfDigits {
 
         System.out.println(initial + "의 각 자릿수의 합: " + answer);
     }
+
+    public int stream(int n) {
+        int answer = 0;
+        String[] array = String.valueOf(n).split(""); // String.valueOf(n): 정수 n을 문자열로 변환 → .split(""): 문자열의 각 문자를 개별 요소로 분할
+        for(String s : array){
+            answer += Integer.parseInt(s); // 배열을 int로 변환해서 합산
+        }
+        return answer;
+    }
 }
