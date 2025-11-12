@@ -10,7 +10,7 @@ import java.util.List;
 public class 삼진법_뒤집기 {
     public static void main(String[] args) {
         FlipTernary flipTernary = new FlipTernary();
-        System.out.println(flipTernary.solution2(45));
+        System.out.println(flipTernary.solution3(45));
     }
 }
 
@@ -28,6 +28,17 @@ class FlipTernary {
             answer = answer + n % 3;
             n = n / 3;
         }
+        return Integer.parseInt(answer, 3);
+    }
+
+    public int solution3(int n) {
+        char[] ternary = Integer.toString(n,3).toCharArray();
+
+        String answer = "";
+        for (int i = 0; i < ternary.length; i++) {
+            answer += ternary[ternary.length-1 - i];
+        }
+
         return Integer.parseInt(answer, 3);
     }
 }
