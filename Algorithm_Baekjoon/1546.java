@@ -1,3 +1,6 @@
+// 1546 - 평균
+// 최댓값 M이라 할 때, 기존 값을 '기존/M*100'으로 수정 후, 수정된 값들의 평균 구하기
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
